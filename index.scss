@@ -1,0 +1,22 @@
+@import "variables";
+@import "header";
+@import "footer";
+
+@mixin dynamicFunction($color) {
+  background-color: $color;
+}
+
+.box1 {
+  background-color: $hola;
+  height: 100px;
+  width: 100px;
+  label {
+    //nesting
+    color: red;
+    @include dynamicFunction(black);
+  }
+}
+
+.box4 {
+  @extend .box2;
+}
